@@ -27,7 +27,6 @@ def data_generator(sample_size: int) -> pd.DataFrame:
 if not os.path.exists('./train'):
     os.makedirs('./train')
 
-
 if not os.path.exists('./test'):
     os.makedirs('./test')
 
