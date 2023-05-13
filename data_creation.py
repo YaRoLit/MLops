@@ -21,6 +21,11 @@ def data_generator(sample_size: int) -> pd.DataFrame:
     df = pd.DataFrame(list(zip(feature_A, feature_B, feature_C, result)),
                       columns=['A', 'B', 'C', 'Y'])
 
+    # Зашумляем какой-нибудь столбец Nan
+    idx = np.random.randint(0, sample_size, round(sample_size * 0.1))
+
+    df['A'].iloc[idx] = np.NaN
+
     return df
 
 
